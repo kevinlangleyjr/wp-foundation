@@ -23,7 +23,7 @@ sitemap.xml*
 /wp-content/cache/*
 
 # theme built files
-/wp-content/themes/wp-skeleton/style.css
-/wp-content/themes/wp-skeleton/js/main.min.js
-/wp-content/themes/wp-skeleton/js/libs.min.js
-/wp-content/themes/wp-skeleton/js/libs/foundation.js
+/wp-content/themes/wp-foundation/style.css
+/wp-content/themes/wp-foundation/js/main.min.js
+/wp-content/themes/wp-foundation/js/libs.min.js
+/wp-content/themes/wp-foundation/js/libs/foundation.js

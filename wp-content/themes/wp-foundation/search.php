@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package WP Skeleton
+ * @package WP Foundation
  */
 
 get_header(); ?>
@@ -13,7 +13,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'wp_skeleton' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'wp_foundation' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
@@ -30,7 +30,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php wp_skeleton_paging_nav(); ?>
+			<?php wp_foundation_paging_nav(); ?>
 
 		<?php else : ?>
 

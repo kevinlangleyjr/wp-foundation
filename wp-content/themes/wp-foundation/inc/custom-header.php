@@ -12,37 +12,37 @@
 	<?php endif; // End header image check. ?>
 
  *
- * @package WP Skeleton
+ * @package WP Foundation
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses wp_skeleton_header_style()
- * @uses wp_skeleton_admin_header_style()
- * @uses wp_skeleton_admin_header_image()
+ * @uses wp_foundation_header_style()
+ * @uses wp_foundation_admin_header_style()
+ * @uses wp_foundation_admin_header_image()
  */
-function wp_skeleton_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'wp_skeleton_custom_header_args', array(
+function wp_foundation_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'wp_foundation_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'wp_skeleton_header_style',
-		'admin-head-callback'    => 'wp_skeleton_admin_header_style',
-		'admin-preview-callback' => 'wp_skeleton_admin_header_image',
+		'wp-head-callback'       => 'wp_foundation_header_style',
+		'admin-head-callback'    => 'wp_foundation_admin_header_style',
+		'admin-preview-callback' => 'wp_foundation_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'wp_skeleton_custom_header_setup' );
+add_action( 'after_setup_theme', 'wp_foundation_custom_header_setup' );
 
-if ( ! function_exists( 'wp_skeleton_header_style' ) ) :
+if ( ! function_exists( 'wp_foundation_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see wp_skeleton_custom_header_setup().
+ * @see wp_foundation_custom_header_setup().
  */
-function wp_skeleton_header_style() {
+function wp_foundation_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -75,15 +75,15 @@ function wp_skeleton_header_style() {
 	</style>
 	<?php
 }
-endif; // wp_skeleton_header_style
+endif; // wp_foundation_header_style
 
-if ( ! function_exists( 'wp_skeleton_admin_header_style' ) ) :
+if ( ! function_exists( 'wp_foundation_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see wp_skeleton_custom_header_setup().
+ * @see wp_foundation_custom_header_setup().
  */
-function wp_skeleton_admin_header_style() {
+function wp_foundation_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -103,15 +103,15 @@ function wp_skeleton_admin_header_style() {
 	</style>
 <?php
 }
-endif; // wp_skeleton_admin_header_style
+endif; // wp_foundation_admin_header_style
 
-if ( ! function_exists( 'wp_skeleton_admin_header_image' ) ) :
+if ( ! function_exists( 'wp_foundation_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see wp_skeleton_custom_header_setup().
+ * @see wp_foundation_custom_header_setup().
  */
-function wp_skeleton_admin_header_image() {
+function wp_foundation_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
@@ -123,4 +123,4 @@ function wp_skeleton_admin_header_image() {
 	</div>
 <?php
 }
-endif; // wp_skeleton_admin_header_image
+endif; // wp_foundation_admin_header_image

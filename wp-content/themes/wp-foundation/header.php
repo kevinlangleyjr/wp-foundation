@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package WP Skeleton
+ * @package WP Foundation
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -20,7 +20,7 @@
 
 <body <?php body_class(); ?>>
 <div class="main-container">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'wp_skeleton' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'wp_foundation' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">
@@ -30,7 +30,7 @@
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'wp_skeleton' ); ?></button>
+				<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'wp_foundation' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #site-navigation -->
 		</div><!-- .container -->

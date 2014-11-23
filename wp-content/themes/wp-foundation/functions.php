@@ -1,8 +1,8 @@
 <?php
 /**
- * WP Skeleton functions and definitions
+ * WP Foundation functions and definitions
  *
- * @package WP Skeleton
+ * @package WP Foundation
  */
 
 if( !defined( 'SCRIPT_VERSION' ) )
@@ -18,7 +18,7 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-if ( ! function_exists( 'wp_skeleton_setup' ) ) :
+if ( ! function_exists( 'wp_foundation_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -26,15 +26,15 @@ if ( ! function_exists( 'wp_skeleton_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function wp_skeleton_setup() {
+function wp_foundation_setup() {
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on WP Skeleton, use a find and replace
-	 * to change 'wp_skeleton' to the name of your theme in all the template files
+	 * If you're building a theme based on WP Foundation, use a find and replace
+	 * to change 'wp_foundation' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'wp_skeleton', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'wp_foundation', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -48,7 +48,7 @@ function wp_skeleton_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'wp_skeleton' ),
+		'primary' => __( 'Primary Menu', 'wp_foundation' ),
 	) );
 
 	/*
@@ -68,22 +68,22 @@ function wp_skeleton_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'wp_skeleton_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'wp_foundation_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
-endif; // wp_skeleton_setup
-add_action( 'after_setup_theme', 'wp_skeleton_setup' );
+endif; // wp_foundation_setup
+add_action( 'after_setup_theme', 'wp_foundation_setup' );
 
 /**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function wp_skeleton_widgets_init() {
+function wp_foundation_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'wp_skeleton' ),
+		'name'          => __( 'Sidebar', 'wp_foundation' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -92,27 +92,27 @@ function wp_skeleton_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'wp_skeleton_widgets_init' );
+add_action( 'widgets_init', 'wp_foundation_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function wp_skeleton_scripts() {
-	wp_enqueue_style( 'wp-skeleton-style', get_stylesheet_uri() );
+function wp_foundation_scripts() {
+	wp_enqueue_style( 'wp-foundation-style', get_stylesheet_uri() );
 
 		if( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ){
-			wp_enqueue_script( 'wp-skeleton-foundation', get_template_directory_uri() . '/js/libs/foundation.js', array( 'jquery' ), SCRIPT_VERSION, true );
-			wp_enqueue_script( 'wp-skeleton-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), SCRIPT_VERSION, true );
-			wp_enqueue_script( 'wp-skeleton-main', get_template_directory_uri() . '/js/main.js', array( 'jquery', 'wp-skeleton-foundation' ), SCRIPT_VERSION, true );
+			wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/libs/foundation.js', array( 'jquery' ), SCRIPT_VERSION, true );
+			wp_enqueue_script( 'wp-foundation-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), SCRIPT_VERSION, true );
+			wp_enqueue_script( 'wp-foundation-main', get_template_directory_uri() . '/js/main.js', array( 'jquery', 'foundation' ), SCRIPT_VERSION, true );
 		} else {
-			wp_enqueue_script( 'wp-skeleton-libs', get_template_directory_uri() . '/js/libs.min.js', array( 'jquery' ), SCRIPT_VERSION, true );
-			wp_enqueue_script( 'wp-skeleton-main', get_template_directory_uri() . '/js/main.min.js', array( 'jquery', 'wp-skeleton-libs' ), SCRIPT_VERSION, true );
+			wp_enqueue_script( 'wp-foundation-libs', get_template_directory_uri() . '/js/libs.min.js', array( 'jquery' ), SCRIPT_VERSION, true );
+			wp_enqueue_script( 'wp-foundation-main', get_template_directory_uri() . '/js/main.min.js', array( 'jquery', 'wp-foundation-libs' ), SCRIPT_VERSION, true );
 		}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
 }
-add_action( 'wp_enqueue_scripts', 'wp_skeleton_scripts' );
+add_action( 'wp_enqueue_scripts', 'wp_foundation_scripts' );
 
 /**
  * Implement the Custom Header feature.

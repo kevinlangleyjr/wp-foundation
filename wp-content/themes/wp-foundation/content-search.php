@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package WP Skeleton
+ * @package WP Foundation
  */
 ?>
 
@@ -14,7 +14,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php wp_skeleton_posted_on(); ?>
+			<?php wp_foundation_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -24,6 +24,6 @@
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php wp_skeleton_entry_footer(); ?>
+		<?php wp_foundation_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

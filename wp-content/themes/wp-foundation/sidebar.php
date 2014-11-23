@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package WP Skeleton
+ * @package WP Foundation
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

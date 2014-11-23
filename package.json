@@ -1,13 +1,13 @@
 {
-    "name": "wp-skeleton",
-    "description": "WP Skeleton",
+    "name": "wp-foundation",
+    "description": "WP Foundation",
     "version": "0.1.0",
     "repository": {
         "type": "git",
-        "url": "git@github.com:kevinlangleyjr/wp-skeleton.git"
+        "url": "git@github.com:kevinlangleyjr/wp-foundation.git"
     },
     "bugs": {
-        "url": "https://github.com/kevinlangleyjr/wp-skeleton/issues"
+        "url": "https://github.com/kevinlangleyjr/wp-foundation/issues"
     },
     "devDependencies": {
         "grunt": "~0.4.0",

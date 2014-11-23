@@ -6,12 +6,12 @@ if ( !$_tests_dir ) {
 }
 
 define( 'WP_CONTENT_DIR', dirname( dirname( __FILE__ ) ) . '/wp-content' );
-define( 'WP_DEFAULT_THEME', 'WP Skeleton' );
+define( 'WP_DEFAULT_THEME', 'WP Foundation' );
 
 require_once $_tests_dir . '/includes/functions.php';
 
 $return_theme = function() {
-	return 'wp-skeleton';
+	return 'wp-foundation';
 };
 
 tests_add_filter( 'template', $return_theme);

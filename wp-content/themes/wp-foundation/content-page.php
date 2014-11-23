@@ -1,29 +1,27 @@
 <?php
 /**
- * @package WP Skeleton
+ * The template used for displaying page content in page.php
+ *
+ * @package WP Foundation
  */
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="entry-meta">
-			<?php wp_skeleton_posted_on(); ?>
-		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'wp_skeleton' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'wp_foundation' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php wp_skeleton_entry_footer(); ?>
+		<?php edit_post_link( __( 'Edit', 'wp_foundation' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

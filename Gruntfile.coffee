@@ -1,6 +1,6 @@
 #
 # WP Skeleton
-# https://github.com/kevinlangleyjr/wp-skeleton
+# https://github.com/kevinlangleyjr/wp-foundation
 #
 
 module.exports = (grunt) ->
@@ -22,7 +22,7 @@ module.exports = (grunt) ->
           $: true
           ajaxurl: true
 
-      theme: ["wp-content/themes/wp-skeleton/js/main.js"]
+      theme: ["wp-content/themes/wp-foundation/js/main.js"]
 
     uglify:
       theme:
@@ -30,73 +30,73 @@ module.exports = (grunt) ->
           preserveComments: "some"
 
         files:
-          "wp-content/themes/wp-skeleton/js/main.min.js": [
-            "wp-content/themes/wp-skeleton/js/main.js"
-            "wp-content/themes/wp-skeleton/js/skip-link-focus-fix.js"
+          "wp-content/themes/wp-foundation/js/main.min.js": [
+            "wp-content/themes/wp-foundation/js/main.js"
+            "wp-content/themes/wp-foundation/js/skip-link-focus-fix.js"
           ]
-          "wp-content/themes/wp-skeleton/js/libs.min.js": [
-            "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.js"
-            "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.abide.js"
-            "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.accordion.js"
-            "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.alert.js"
-            "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.clearing.js"
-            "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.dropdown.js"
-            "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.interchange.js"
-            "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.joyride.js"
-            "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.magellan.js"
-            "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.offcanvas.js"
-            "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.orbit.js"
-            "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.reveal.js"
-            "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.slider.js"
-            "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.tab.js"
-            "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.tooltip.js"
-            "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.topbar.js"
-            "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.equalizer.js"
+          "wp-content/themes/wp-foundation/js/libs.min.js": [
+            "wp-content/themes/wp-foundation/js/libs/foundation/foundation.js"
+            "wp-content/themes/wp-foundation/js/libs/foundation/foundation.abide.js"
+            "wp-content/themes/wp-foundation/js/libs/foundation/foundation.accordion.js"
+            "wp-content/themes/wp-foundation/js/libs/foundation/foundation.alert.js"
+            "wp-content/themes/wp-foundation/js/libs/foundation/foundation.clearing.js"
+            "wp-content/themes/wp-foundation/js/libs/foundation/foundation.dropdown.js"
+            "wp-content/themes/wp-foundation/js/libs/foundation/foundation.interchange.js"
+            "wp-content/themes/wp-foundation/js/libs/foundation/foundation.joyride.js"
+            "wp-content/themes/wp-foundation/js/libs/foundation/foundation.magellan.js"
+            "wp-content/themes/wp-foundation/js/libs/foundation/foundation.offcanvas.js"
+            "wp-content/themes/wp-foundation/js/libs/foundation/foundation.orbit.js"
+            "wp-content/themes/wp-foundation/js/libs/foundation/foundation.reveal.js"
+            "wp-content/themes/wp-foundation/js/libs/foundation/foundation.slider.js"
+            "wp-content/themes/wp-foundation/js/libs/foundation/foundation.tab.js"
+            "wp-content/themes/wp-foundation/js/libs/foundation/foundation.tooltip.js"
+            "wp-content/themes/wp-foundation/js/libs/foundation/foundation.topbar.js"
+            "wp-content/themes/wp-foundation/js/libs/foundation/foundation.equalizer.js"
           ]
 
     concat:
       foundation:
         src: [
-          "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.js"
-          "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.abide.js"
-          "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.accordion.js"
-          "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.alert.js"
-          "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.clearing.js"
-          "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.dropdown.js"
-          "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.interchange.js"
-          "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.joyride.js"
-          "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.magellan.js"
-          "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.offcanvas.js"
-          "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.orbit.js"
-          "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.reveal.js"
-          "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.slider.js"
-          "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.tab.js"
-          "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.tooltip.js"
-          "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.topbar.js"
-          "wp-content/themes/wp-skeleton/js/libs/foundation/foundation.equalizer.js"
+          "wp-content/themes/wp-foundation/js/libs/foundation/foundation.js"
+          "wp-content/themes/wp-foundation/js/libs/foundation/foundation.abide.js"
+          "wp-content/themes/wp-foundation/js/libs/foundation/foundation.accordion.js"
+          "wp-content/themes/wp-foundation/js/libs/foundation/foundation.alert.js"
+          "wp-content/themes/wp-foundation/js/libs/foundation/foundation.clearing.js"
+          "wp-content/themes/wp-foundation/js/libs/foundation/foundation.dropdown.js"
+          "wp-content/themes/wp-foundation/js/libs/foundation/foundation.interchange.js"
+          "wp-content/themes/wp-foundation/js/libs/foundation/foundation.joyride.js"
+          "wp-content/themes/wp-foundation/js/libs/foundation/foundation.magellan.js"
+          "wp-content/themes/wp-foundation/js/libs/foundation/foundation.offcanvas.js"
+          "wp-content/themes/wp-foundation/js/libs/foundation/foundation.orbit.js"
+          "wp-content/themes/wp-foundation/js/libs/foundation/foundation.reveal.js"
+          "wp-content/themes/wp-foundation/js/libs/foundation/foundation.slider.js"
+          "wp-content/themes/wp-foundation/js/libs/foundation/foundation.tab.js"
+          "wp-content/themes/wp-foundation/js/libs/foundation/foundation.tooltip.js"
+          "wp-content/themes/wp-foundation/js/libs/foundation/foundation.topbar.js"
+          "wp-content/themes/wp-foundation/js/libs/foundation/foundation.equalizer.js"
         ]
-        dest: "wp-content/themes/wp-skeleton/js/libs/foundation.js"
+        dest: "wp-content/themes/wp-foundation/js/libs/foundation.js"
 
       main:
         src: [
-          "wp-content/themes/wp-skeleton/js/main.js"
-          "wp-content/themes/wp-skeleton/js/skip-link-focus-fix.js"
+          "wp-content/themes/wp-foundation/js/main.js"
+          "wp-content/themes/wp-foundation/js/skip-link-focus-fix.js"
         ]
-        dest: "wp-content/themes/wp-skeleton/js/main.min.js"
+        dest: "wp-content/themes/wp-foundation/js/main.min.js"
 
     imagemin:
       theme:
         files: [
           expand: true
-          cwd: "wp-content/themes/wp-skeleton/img/"
+          cwd: "wp-content/themes/wp-foundation/img/"
           src: "**/*.{png,jpg}"
-          dest: "wp-content/themes/wp-skeleton/img/"
+          dest: "wp-content/themes/wp-foundation/img/"
         ]
 
     compass:
       options:
-        config: "wp-content/themes/wp-skeleton/config.rb"
-        basePath: "wp-content/themes/wp-skeleton"
+        config: "wp-content/themes/wp-foundation/config.rb"
+        basePath: "wp-content/themes/wp-foundation"
         force: true
 
       production:
@@ -109,14 +109,14 @@ module.exports = (grunt) ->
 
     watch:
       scripts:
-        files: "wp-content/themes/wp-skeleton/js/**/*.js"
+        files: "wp-content/themes/wp-foundation/js/**/*.js"
         tasks: [
           "jshint"
           "concat"
         ]
 
       images:
-        files: "wp-content/themes/wp-skeleton/img/**/*.{png,jpg,gif}"
+        files: "wp-content/themes/wp-foundation/img/**/*.{png,jpg,gif}"
         tasks: ["imagemin"]
 
       composer:
@@ -124,7 +124,7 @@ module.exports = (grunt) ->
         tasks: ["composer:update"]
 
       styles:
-        files: "wp-content/themes/wp-skeleton/sass/**/*.scss"
+        files: "wp-content/themes/wp-foundation/sass/**/*.scss"
         tasks: ["compass"]
 
     build:
