@@ -10,6 +10,14 @@
         "url": "https://github.com/kevinlangleyjr/wp-skeleton/issues"
     },
     "devDependencies": {
-        "grunt-voce-plugins": "latest"
+        "grunt": "~0.4.0",
+        "grunt-contrib-compass": "~0.9",
+        "grunt-contrib-concat": "~0.5",
+        "grunt-contrib-imagemin": "~0.8",
+        "grunt-contrib-jshint": "~0.10",
+        "grunt-contrib-uglify": "~0.5",
+        "grunt-contrib-watch": "~0.6",
+        "grunt-peon-build": "~0.1",
+        "grunt-composer": "~0.4"
     }
 }

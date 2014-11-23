@@ -123,7 +123,14 @@ module.exports = (grunt) ->
 
 
   #load the tasks
-  grunt.loadNpmTasks "grunt-voce-plugins"
+  grunt.loadNpmTasks "grunt-contrib-compass"
+  grunt.loadNpmTasks "grunt-contrib-concat"
+  grunt.loadNpmTasks "grunt-contrib-imagemin"
+  grunt.loadNpmTasks "grunt-contrib-jshint"
+  grunt.loadNpmTasks "grunt-contrib-uglify"
+  grunt.loadNpmTasks "grunt-contrib-watch"
+  grunt.loadNpmTasks "grunt-peon-build"
+  grunt.loadNpmTasks "grunt-composer"
 
   #set the default task as the development build
   grunt.registerTask "default", ["build:development"]
