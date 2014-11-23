@@ -96,7 +96,7 @@ module.exports = (grunt) ->
         tasks: ["composer:update"]
 
       styles:
-        files: "sass/**/*.scss"
+        files: "wp-content/themes/wp-skeleton/sass/**/*.scss"
         tasks: ["compass"]
 
     build:
