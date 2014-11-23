@@ -18,6 +18,8 @@
 				<?php printf( __( 'Theme: %1$s by %2$s', 'wp_skeleton' ), 'wp_skeleton', '<a href="http://kevinlangleyjr.com/" target="_blank" rel="designer">Kevin Langley Jr.</a>' ); ?>
 				<span class="sep"> | </span>
 				Based off of <a href="http://underscores.me/" target="_blank">_s</a> by <a href="http://automattic.com/" target="_blank">Automattic</a>
+				<span class="sep"> | </span>
+				Using <a href="http://foundation.zurb.com/" target="_blank">Foundation 5</a> by <a href="http://zurb.com/" target="_blank">Zurb</a>
 			</div><!-- .site-info -->
 		</div><!-- .container -->
 	</footer><!-- #colophon -->

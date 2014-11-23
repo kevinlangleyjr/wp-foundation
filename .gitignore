@@ -25,3 +25,5 @@ sitemap.xml*
 # theme built files
 /wp-content/themes/wp-skeleton/style.css
 /wp-content/themes/wp-skeleton/js/main.min.js
+/wp-content/themes/wp-skeleton/js/libs.min.js
+/wp-content/themes/wp-skeleton/js/libs/foundation.js
