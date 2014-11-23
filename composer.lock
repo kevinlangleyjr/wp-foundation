@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "36bb3e532f3a026f5ee223b78503ca3b",
+    "hash": "1abd0aea92253d62e132ed544ba82a0c",
     "packages": [
         {
             "name": "composer/installers",
@@ -125,15 +125,15 @@
         },
         {
             "name": "voceconnect/wordpress",
-            "version": "3.9.2",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress",
-                "reference": "3.9.2"
+                "reference": "4.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://wordpress.org/wordpress-3.9.2.zip",
+                "url": "http://wordpress.org/wordpress-4.0.1.zip",
                 "reference": null,
                 "shasum": null
             },
