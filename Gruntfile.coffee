@@ -1,5 +1,5 @@
 #
-# WP Skeleton
+# WP Foundation
 # https://github.com/kevinlangleyjr/wp-foundation
 #
 

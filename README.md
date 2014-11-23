@@ -1,4 +1,4 @@
-#WP Skeleton#
+#WP Foundation#
 
 This is a starter theme based off of [_s](http://underscores.me) by [Automattic](http://automattic.com) with [Zurb's](http://zurb.com/) [Foundation](https://github.com/zurb/foundation) integrated into the styles.
 

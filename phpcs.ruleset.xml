@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="WP Skeleton">
-  <description>WP Skeleton Coding Standards</description>
+<ruleset name="WP Foundation">
+  <description>WP Foundation Coding Standards</description>
 
   <exclude-pattern>wp-content/drop-ins/*</exclude-pattern>
 
