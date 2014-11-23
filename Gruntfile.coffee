@@ -1,6 +1,6 @@
 #
 # WP Skeleton
-# https://github.com/voceconnect/wp-skeleton
+# https://github.com/kevinlangleyjr/wp-skeleton
 #
 
 module.exports = (grunt) ->

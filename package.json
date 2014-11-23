@@ -4,10 +4,10 @@
     "version": "0.1.0",
     "repository": {
         "type": "git",
-        "url": "git@github.com:voceconnect/wp-skeleton.git"
+        "url": "git@github.com:kevinlangleyjr/wp-skeleton.git"
     },
     "bugs": {
-        "url": "https://github.com/voceconnect/wp-skeleton/issues"
+        "url": "https://github.com/kevinlangleyjr/wp-skeleton/issues"
     },
     "devDependencies": {
         "grunt-voce-plugins": "latest"
