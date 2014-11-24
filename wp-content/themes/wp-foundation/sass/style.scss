@@ -21,3 +21,9 @@ Media
 @import "underscores/underscores";
 
 @import "theme/theme";
+
+@media screen and (max-width: 600px) {
+    #wpadminbar {
+		position: fixed !important;
+	}
+}

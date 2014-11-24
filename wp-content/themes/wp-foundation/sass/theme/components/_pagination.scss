@@ -1,0 +1,22 @@
+.paging-navigation {
+	margin: 1.25rem 0;
+}
+
+.nav-links {
+	@include clearfix();
+}
+
+.nav-previous {
+	float:left;
+}
+
+.nav-next {
+	float:right;
+}
+
+.nav-previous,
+.nav-next {
+	a {
+		@extend .button;
+	}
+}

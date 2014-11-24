@@ -1,4 +1,5 @@
 .container {
-	width: $container-width;
+	max-width: $container-width;
+	width:100%;
 	margin: 0 auto;
 }

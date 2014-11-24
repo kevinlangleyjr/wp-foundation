@@ -125,7 +125,7 @@ module.exports = (grunt) ->
 
       styles:
         files: "wp-content/themes/wp-foundation/sass/**/*.scss"
-        tasks: ["compass"]
+        tasks: ["compass:development"]
 
     build:
       production: [
