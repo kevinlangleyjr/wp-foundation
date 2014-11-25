@@ -34,7 +34,7 @@ function wp_foundation_setup() {
 	 * If you're building a theme based on WP Foundation, use a find and replace
 	 * to change 'wp_foundation' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'wp_foundation', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'wp_foundation', __DIR__ . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -117,24 +117,29 @@ add_action( 'wp_enqueue_scripts', 'wp_foundation_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/includes/custom-header.php';
+//require __DIR__ . '/includes/custom-header.php';
 
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/includes/template-tags.php';
+require __DIR__ . '/includes/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require get_template_directory() . '/includes/extras.php';
+require __DIR__ . '/includes/extras.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/includes/customizer.php';
+require __DIR__ . '/includes/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
  */
-require get_template_directory() . '/includes/jetpack.php';
+require __DIR__ . '/includes/jetpack.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
+require __DIR__ . '/includes/walkers/walkers.php';

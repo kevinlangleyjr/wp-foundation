@@ -23,16 +23,25 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'wp_foundation' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="container">
-			<div class="site-branding">
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</div><!-- .site-branding -->
-
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'wp_foundation' ); ?></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			</nav><!-- #site-navigation -->
+		<div class="contain-to-grid">
+			<nav class="top-bar" data-topbar>
+				<ul class="title-area">
+					<li class="name">
+						<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					</li>
+					<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+					<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+				</ul>
+				<section class="top-bar-section">
+					<?php wp_nav_menu( array(
+							'theme_location' => 'primary',
+							'container' => false,
+							'depth' => 0,
+							'items_wrap' => '<ul id="%1$s" class="%2$s right">%3$s</ul>',
+							'walker' => new Walker_WP_Foundation_Top_Bar_Nav_Menu()
+					) ); ?>
+				</section>
+			</nav>
 		</div><!-- .container -->
 	</header><!-- #masthead -->
 
