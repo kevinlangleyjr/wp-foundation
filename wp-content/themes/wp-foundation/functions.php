@@ -83,10 +83,10 @@ add_action( 'after_setup_theme', 'wp_foundation_setup' );
  */
 function wp_foundation_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'wp_foundation' ),
-		'id'            => 'sidebar-1',
+		'name'          => __( 'Main Sidebar', 'wp_foundation' ),
+		'id'            => 'main-sidebar',
 		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'before_widget' => '<aside id="%1$s" class="panel widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
@@ -98,6 +98,7 @@ add_action( 'widgets_init', 'wp_foundation_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wp_foundation_scripts() {
+	wp_enqueue_style( 'wp-foundation-google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300' );
 	wp_enqueue_style( 'wp-foundation-style', get_stylesheet_uri() );
 
 		if( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ){

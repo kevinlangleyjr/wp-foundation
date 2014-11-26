@@ -67,9 +67,6 @@ if ( ! function_exists( 'wp_foundation_posted_on' ) ) :
  */
 function wp_foundation_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-	}
 
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
@@ -78,17 +75,16 @@ function wp_foundation_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'wp_foundation' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-	);
+	$posted_on = sprintf( '<a href="%s" rel="bookmark">%s</a>', esc_url( get_permalink() ), $time_string );
 
 	$byline = sprintf(
-		_x( 'by %s', 'post author', 'wp_foundation' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		_x( 'By %s', 'post author', 'wp_foundation' ),
+		'<span class="author"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+	$separator = '<span class="separator">&nbsp;/&nbsp;</span>';
+
+	echo '<span class="byline"> ' . $byline . '</span>' . $separator . '<span class="posted-on">' . $posted_on . '</span>';
 
 }
 endif;
@@ -103,13 +99,13 @@ function wp_foundation_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'wp_foundation' ) );
 		if ( $categories_list && wp_foundation_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'wp_foundation' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links">' . __( 'Categories: %1$s', 'wp_foundation' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'wp_foundation' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'wp_foundation' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . __( 'Tags: %1$s', 'wp_foundation' ) . '</span>', $tags_list );
 		}
 	}
 

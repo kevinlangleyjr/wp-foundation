@@ -1,5 +1,23 @@
+body {
+	background-color: #f6f6f6;
+}
+
 .container {
 	max-width: $container-width;
 	width:100%;
 	margin: 0 auto;
+}
+
+.site-header {
+	margin-bottom: 3rem;
+}
+
+.site-main {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	padding: 2rem;
+}
+
+.site-footer {
+	margin-top: 3rem;
 }
