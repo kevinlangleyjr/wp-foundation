@@ -33,6 +33,9 @@ class Walker_WP_Foundation_Top_Bar_Nav_Menu extends Walker_Nav_Menu {
 		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
 		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 
+		if( $depth === 0 )
+			$output .= $indent . '<li class="divider"></li>';
+
 		$output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
 
 		$attributes  = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) .'"' : '';
