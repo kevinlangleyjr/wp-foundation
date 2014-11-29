@@ -4,4 +4,10 @@ footer.site-footer {
 	padding-top: 1.25rem;
 	border-top: solid 1px #ccc;
 	background-color: #fff;
+	p {
+		color: rgba($tuatara, 0.7);
+		a {
+			color: rgba($anchor-font-color, 0.7);
+		}
+	}
 }
