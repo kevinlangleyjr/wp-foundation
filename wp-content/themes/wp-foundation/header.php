@@ -38,6 +38,7 @@
 							'container' => false,
 							'depth' => 0,
 							'items_wrap' => '<ul id="%1$s" class="%2$s right">%3$s</ul>',
+							'fallback_cb' => 'wp_foundation_page_menu',
 							'walker' => new Walker_WP_Foundation_Top_Bar_Nav_Menu()
 					) ); ?>
 				</section>

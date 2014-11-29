@@ -141,6 +141,6 @@ require __DIR__ . '/includes/customizer.php';
 require __DIR__ . '/includes/jetpack.php';
 
 /**
- * Load Jetpack compatibility file.
+ * Load custom WP Foundation Nav Menu
  */
-require __DIR__ . '/includes/walkers/walkers.php';
+require __DIR__ . '/includes/nav-menu.php';

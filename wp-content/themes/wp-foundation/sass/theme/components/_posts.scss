@@ -1,10 +1,14 @@
-article.post {
+article.post, article.page {
 	border-bottom: 1px solid #ddd;
 	padding-bottom: 2rem;
 	margin-bottom: 2rem;
 
 	body.single & {
 		border-bottom: 0;
+	}
+	&:last-child {
+		border-bottom: 0;
+		padding-bottom: 0;
 	}
 	.entry-footer {
 		span {
