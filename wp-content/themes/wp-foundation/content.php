@@ -26,8 +26,8 @@
 
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'wp_foundation' ),
-				'after'  => '</div>',
+				'before' => '<ul class="page-links pagination">',
+				'after'  => '</ul>'
 			) );
 		?>
 	</div><!-- .entry-content -->

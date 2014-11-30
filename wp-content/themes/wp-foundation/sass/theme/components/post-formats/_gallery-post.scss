@@ -1,6 +1,33 @@
 @import "compass/css3/transform";
 /* Blog gallery */
 
+.clearing-blackout {
+	.gallery {
+		max-width: none;
+		margin: 0;
+		left: auto;
+	}
+
+	.gallery-item {
+		height: auto;
+		&:hover {
+			.gallery-caption {
+				display: none;
+			}
+		}
+		&:first-child {
+			width: 120px;
+			height: auto;
+			img {
+				max-height: none;
+			}
+			.portrait {
+				max-width: none;
+			}
+		}
+	}
+}
+
 .blog .format-gallery,
 .archive .format-gallery,
 .search .format-gallery {
@@ -53,32 +80,6 @@
 			width: 100%;
 			img {
 				@include translate(-50%, -50%);
-			}
-		}
-	}
-	.clearing-blackout {
-		.gallery {
-			max-width: none;
-			margin: 0;
-			left: auto;
-		}
-
-		.gallery-item {
-			height: auto;
-			&:hover {
-				.gallery-caption {
-					display: none;
-				}
-			}
-			&:first-child {
-				width: 120px;
-				height: auto;
-				img {
-					max-height: none;
-				}
-				.portrait {
-					max-width: none;
-				}
 			}
 		}
 	}

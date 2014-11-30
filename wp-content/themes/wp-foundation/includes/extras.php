@@ -92,9 +92,46 @@ function wp_foundation_wp_link_pages_link( $link, $i ){
 	global $page;
 
 	if( $page == $i ){
-		return '<li class="current"><a href="#">' . $link . '</a></li>';
+		if( strpos( $link, '<a' ) === false ){
+			$link = '<li class="current"><a href="#">' . $link . '</a></li>';
+		} else {
+			$link = '<li class="current">' . $link . '</li>';
+		}
+	} else {
+		$link = '<li>' . $link . '</li>';
 	}
 
-	return '<li>' . $link . '</li>';
+	return $link;
 }
 add_filter( 'wp_link_pages_link', 'wp_foundation_wp_link_pages_link', 10, 2 );
+
+function wp_foundation_password_form(){
+	global $post;
+
+	$label = 'pwbox-' . ( empty($post->ID) ? rand() : $post->ID );
+	ob_start();
+
+	?>
+	<form method="post" action="<?php echo esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ); ?>" class="post-password-form">
+		<p><?php _e( 'This content is password protected. To view it please enter your password below:' ); ?></p>
+		<div class="row collapse">
+			<div class="large-9 columns">
+				<input name="post_password" id="<?php echo esc_attr( $label ); ?>" type="password" size="20" placeholder="Password">
+			</div>
+			<div class="large-3 columns">
+				<input type="submit" name="Submit" value="<?php echo esc_attr__( 'Submit' ); ?>" class="button postfix">
+			</div>
+		</div>
+	</form>
+	<?php
+
+	$output = ob_get_clean();
+
+	return $output;
+}
+add_filter( 'the_password_form', 'wp_foundation_password_form' );
+
+function wp_foundation_more_link() {
+	return sprintf('<a class="more-link button" href="%s">%s</a>', esc_url( get_permalink() ), __( 'Read More', 'wp_foundation' ) );
+}
+add_filter( 'the_content_more_link', 'wp_foundation_more_link' );
