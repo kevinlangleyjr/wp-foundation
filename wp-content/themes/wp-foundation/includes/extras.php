@@ -87,3 +87,14 @@ function wp_foundation_setup_author() {
 	}
 }
 add_action( 'wp', 'wp_foundation_setup_author' );
+
+function wp_foundation_wp_link_pages_link( $link, $i ){
+	global $page;
+
+	if( $page == $i ){
+		return '<li class="current"><a href="#">' . $link . '</a></li>';
+	}
+
+	return '<li>' . $link . '</li>';
+}
+add_filter( 'wp_link_pages_link', 'wp_foundation_wp_link_pages_link', 10, 2 );
