@@ -1,10 +1,12 @@
-@import "settings.scss";
-@import "functions.scss";
-@import "base.scss";
+@import "settings";
+@import "functions";
+@import "base";
 
 @import "components/posts";
 @import "components/pagination";
 @import "components/footer";
+@import "components/galleries";
 @import "components/widgets";
 @import "components/search";
+@import "components/post-formats";
 @import "components/misc";

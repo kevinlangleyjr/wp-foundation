@@ -1,5 +1,5 @@
 .paging-navigation {
-	margin: 1.25rem 0;
+	margin: 1.25rem 0 0;
 }
 
 .nav-links {
@@ -18,5 +18,6 @@
 .nav-next {
 	a {
 		@extend .button;
+		margin-bottom: 0;
 	}
 }

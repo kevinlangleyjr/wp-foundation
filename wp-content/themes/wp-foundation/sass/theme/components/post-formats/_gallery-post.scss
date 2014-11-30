@@ -1,0 +1,123 @@
+@import "compass/css3/transform";
+/* Blog gallery */
+
+.blog .format-gallery,
+.archive .format-gallery,
+.search .format-gallery {
+	.gallery {
+		max-width: 608px;
+		margin: 0 auto 20px;
+		position: relative;
+		left: 2px;
+		br {
+			display: none;
+		}
+	}
+	.gallery-item {
+		display: block;
+		height: 148px;
+		margin-right: 4px;
+		max-height: 100%;
+		max-width: 100%;
+		overflow: hidden;
+		width: 148px;
+		img {
+			height: 100%;
+			max-height: 148px;
+			max-width: none;
+			width: auto;
+		}
+		.portrait {
+			img {
+				height: auto;
+				max-height: none;
+				max-width: 148px;
+				width: 100%;
+			}
+		}
+		&:first-child {
+			height: 300px;
+			width: 300px;
+			img {
+				max-height: 300px;
+			}
+			.portrait {
+				max-height: none;
+				max-width: 300px;
+			}
+		}
+
+		.gallery-icon {
+			height: 100%;
+			@include translate(50%, 50%);
+			width: 100%;
+			img {
+				@include translate(-50%, -50%);
+			}
+		}
+	}
+	.clearing-blackout {
+		.gallery {
+			max-width: none;
+			margin: 0;
+			left: auto;
+		}
+
+		.gallery-item {
+			height: auto;
+			&:hover {
+				.gallery-caption {
+					display: none;
+				}
+			}
+			&:first-child {
+				width: 120px;
+				height: auto;
+				img {
+					max-height: none;
+				}
+				.portrait {
+					max-width: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 359px) {
+	.gallery .gallery-item,
+	.single .gallery-columns-2.gallery-size-thumbnail .gallery-item,
+	.blog .format-gallery .gallery-item,
+	.archive .format-gallery .gallery-item,
+	.search .format-gallery .gallery-item {
+		max-width: none;
+		width: 49%;
+		width: -webkit-calc(50% - 4px);
+		width:         calc(50% - 4px);
+	}
+
+	.single .gallery-columns-1.gallery-size-medium,
+	.single .gallery-columns-1.gallery-size-thumbnail,
+	.single .gallery-columns-2.gallery-size-thumbnail,
+	.single .gallery-columns-3.gallery-size-thumbnail {
+		display: block;
+	}
+
+	.single .gallery-columns-1.gallery-size-medium .gallery-item,
+	.single .gallery-columns-1.gallery-size-thumbnail .gallery-item,
+	.blog .format-gallery .gallery-item:first-child,
+	.archive .format-gallery .gallery-item:first-child,
+	.search .format-gallery .gallery-item:first-child {
+		text-align: center;
+		width: 98%;
+		width: -webkit-calc(100% - 4px);
+		width:         calc(100% - 4px);
+	}
+
+	.blog .format-gallery .gallery-item:nth-of-type(odd),
+	.archive .format-gallery .gallery-item:nth-of-type(odd),
+	.search .format-gallery .gallery-item:nth-of-type(odd),
+	.single .gallery .gallery-item:nth-of-type(even) {
+		margin-right: 0;
+	}
+}

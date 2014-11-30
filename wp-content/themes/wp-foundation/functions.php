@@ -15,7 +15,7 @@ if ( !defined( 'THEME_VERSION' ) )
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
+	$content_width = 837; /* pixels */
 }
 
 if ( ! function_exists( 'wp_foundation_setup' ) ) :
@@ -38,6 +38,10 @@ function wp_foundation_setup() {
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
+
+	add_image_size( 'large-cropped', 1024, 1024, true );
+	add_image_size( 'medium-cropped', 300, 300, true );
+	add_image_size( 'thumbnail-cropped', 150, 150, true );
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
@@ -101,6 +105,8 @@ function wp_foundation_scripts() {
 	wp_enqueue_style( 'wp-foundation-google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300' );
 	wp_enqueue_style( 'wp-foundation-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/libs/modernizr.min.js', array( 'jquery' ), SCRIPT_VERSION, true );
+
 		if( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ){
 			wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/libs/foundation.js', array( 'jquery' ), SCRIPT_VERSION, true );
 			wp_enqueue_script( 'wp-foundation-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), SCRIPT_VERSION, true );
@@ -144,3 +150,4 @@ require __DIR__ . '/includes/jetpack.php';
  * Load custom WP Foundation Nav Menu
  */
 require __DIR__ . '/includes/nav-menu.php';
+require __DIR__ . '/includes/gallery.php';
