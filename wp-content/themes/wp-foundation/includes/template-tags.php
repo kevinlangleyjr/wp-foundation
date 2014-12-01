@@ -77,15 +77,12 @@ function wp_foundation_posted_on() {
 
 	$posted_on = sprintf( '<a href="%s" rel="bookmark">%s</a>', esc_url( get_permalink() ), $time_string );
 
-	$byline = sprintf(
-		_x( 'By %s', 'post author', 'wp_foundation' ),
-		'<span class="author"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+	$byline = sprintf( 'by <span class="author"><a class="url fn n" href="%s">%s</a></span>',
+		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		esc_html( get_the_author() )
 	);
 
-	$separator = '<span class="separator">&nbsp;/&nbsp;</span>';
-
-	echo '<span class="byline"> ' . $byline . '</span>' . $separator . '<span class="posted-on">' . $posted_on . '</span>';
-
+	echo $posted_on . ' <span class="byline"> ' . $byline . '</span>';
 }
 endif;
 

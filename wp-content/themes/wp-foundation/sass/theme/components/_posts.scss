@@ -10,6 +10,24 @@ article.post, article.page {
 		border-bottom: 0;
 		padding-bottom: 0;
 	}
+	.entry-header {
+		margin-bottom: 1rem;
+		.entry-meta {
+			color: $steel;
+			font-size: 15px;
+			a {
+				color: $steel;
+				&:hover {
+					color: lighten( $steel, 20% );
+				}
+			}
+		}
+	}
+	.entry-content {
+		p {
+			@include clearfix();
+		}
+	}
 	.entry-footer {
 		span {
 			display: block;
