@@ -15,6 +15,7 @@ sitemap.xml*
 /wp-content/plugins
 /wp-content/drop-ins
 /wp-content/mu-plugins
+/bin
 
 # wpms and wordpress files
 /wp
