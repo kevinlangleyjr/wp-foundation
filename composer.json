@@ -6,11 +6,7 @@
     "repositories": [
         {
             "type": "composer",
-            "url" : "http://wp-plugins.packagist.voceconnect.com/"
-        },
-        {
-            "type": "composer",
-            "url" : "http://packagist.voceconnect.com"
+            "url" : "http://packagist.functionlabs.io"
         }
     ],
     "config": {
@@ -18,7 +14,7 @@
         "bin-dir": "bin"
     },
     "require"     : {
-        "voceconnect/wordpress": "~4.0.1",
+        "functionlabs/wordpress": "~4.1",
         "wpackagist/memcached-redux": "~0.1.3",
         "voceconnect/required-plugins": "~0.2.0"
     },
@@ -33,7 +29,7 @@
     },
     "extra"       : {
         "installer-paths": {
-            "wp/": ["voceconnect/wordpress"],
+            "wp/": ["functionlabs/wordpress"],
             "wp-content/drop-ins/{$name}/": ["wpackagist/memcached-redux"]
         }
     }
