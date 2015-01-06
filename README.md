@@ -11,3 +11,8 @@ This is mainly for my own personal use, but if others find it useful and would l
   - [Node.js](http://nodejs.org)
   - [Grunt](http://gruntjs.com/)
   - [Composer](https://getcomposer.org/)
+
+## Setup
+```npm install```
+
+```grunt build```
