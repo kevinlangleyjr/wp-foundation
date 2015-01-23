@@ -19,7 +19,7 @@
     },
     "require"     : {
         "functionlabs/wordpress": "~4.1",
-        "wpackagist-plugin/memcached-redux": "~0.1.3"
+        "wpackagist-plugin/memcached": "~2.0"
     },
     "require-dev" : {
         "wpackagist-plugin/debug-bar": "9999999-dev",
@@ -33,7 +33,7 @@
     "extra"       : {
         "installer-paths": {
             "wp/": ["functionlabs/wordpress"],
-            "wp-content/drop-ins/{$name}/": ["wpackagist-plugin/memcached-redux"]
+            "wp-content/drop-ins/{$name}/": ["wpackagist-plugin/memcached"]
         }
     }
 }
